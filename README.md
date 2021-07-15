@@ -1,6 +1,9 @@
 # untrustedinstaller.github.io
 
-lmao this is my website. 
-don't mind it's horrendus look. I suck at HTML and CSS
+ignore the website
+under huge amounts of reconstruction
+might become unstable at points
 
-just, be quiet. Hush child.
+# what are you doing
+
+screw off you'll figure out
