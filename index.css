@@ -12,7 +12,14 @@ body {
     width: 100%;
     margin: 0;
     font-family: Segoe_UI, serif;
+    overflow-y: hidden;
+    overflow-x: hidden
     /* background-color: black; */
+}
+
+a, a:hover, a:focus, a:active, a:link {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Classes */
@@ -21,16 +28,57 @@ body {
 }
 
 .acrylic {
-    padding: 4em 6em;
     position: relative;
-    background: rgba(255,255,255,0.5);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(500px);
+    backdrop-filter: blur(500px);
 }
 
 .shadow {
     border-radius: 1px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(255, 255, 255, 0.2);
+}
+
+.button {
+    padding-top: 5px;
+    padding-right: 20px;
+    text-align: center;
+    margin-left: calc(50% - 41px);
+    margin-right: calc(50% - 41px);
+    position: absolute;
+    color: black;
+}
+
+.button img {
+    background: rgb(13, 110, 253);
+    height: 33px;
+    width: auto;
+    margin-top: -5px;
+    margin-left: -3px;
+    margin-bottom: 0;
+}
+
+.rounded {
+    border-radius: 30px !important;
+}
+
+
+/* IDs */
+#index {
+    width: auto;
+    height: 890px;
+    margin: 32px 44px 32px 1071px !important;
+    color: white;
+}
+
+#about-me {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#title {
+    margin-top: 5px;
 }
 
 /* Other */
