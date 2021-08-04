@@ -94,7 +94,7 @@ a:hover, a:focus, a:active {
 #index {
     width: auto;
     height: 800px;
-    margin: 32px 44px 32px 1071px !important;
+    margin: 32px 44px 32px 50% !important;
     color: white;
 }
 
