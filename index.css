@@ -12,14 +12,17 @@ body {
     width: 100%;
     margin: 0;
     font-family: Segoe_UI, serif;
-    overflow-y: hidden;
-    overflow-x: hidden
     /* background-color: black; */
 }
 
 a, a:hover, a:focus, a:active, a:link {
     text-decoration: none;
     color: inherit;
+}
+
+a:hover, a:focus, a:active {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(255, 255, 255, 0.2) !important;
+    color: darkgray;
 }
 
 /* Classes */
@@ -39,34 +42,58 @@ a, a:hover, a:focus, a:active, a:link {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(255, 255, 255, 0.2);
 }
 
-.button {
+.big-button {
     padding-top: 5px;
     padding-right: 20px;
-    text-align: center;
-    margin-left: calc(50% - 41px);
-    margin-right: calc(50% - 41px);
-    position: absolute;
+    height: 195px;
+    width: 596px;
     color: black;
+    position: fixed;
 }
 
-.button img {
+.big-button img {
     background: rgb(13, 110, 253);
-    height: 33px;
-    width: auto;
+    height: calc(100% + 5px);
+    width: 33.3%;
     margin-top: -5px;
     margin-left: -3px;
     margin-bottom: 0;
+}
+
+.big-button span {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 10%;
+}
+
+.button {
+    margin-top: 15px;
+    margin-left: 15%;
+    position: unset;
 }
 
 .rounded {
     border-radius: 30px !important;
 }
 
+.rounded-start {
+    border-radius: 30px 0 0 30px !important;
+}
+
 
 /* IDs */
+#button1 {
+    margin-top: 225px;
+}
+
+#button2 {
+    /*195*/
+    margin-top: 435px;
+}
+
 #index {
     width: auto;
-    height: 890px;
+    height: 800px;
     margin: 32px 44px 32px 1071px !important;
     color: white;
 }
@@ -75,10 +102,6 @@ a, a:hover, a:focus, a:active, a:link {
     margin-top: 20px;
     margin-left: 50px;
     margin-right: 50px;
-}
-
-#title {
-    margin-top: 5px;
 }
 
 /* Other */
