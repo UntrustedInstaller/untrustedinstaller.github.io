@@ -32,14 +32,14 @@ a:hover, a:focus, a:active {
 
 .acrylic {
     position: relative;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(203, 203, 203, 0.5);
     -webkit-backdrop-filter: blur(500px);
     backdrop-filter: blur(500px);
 }
 
 .shadow {
     border-radius: 1px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(203, 203, 203, 0.2);
 }
 
 .big-button {
@@ -66,10 +66,14 @@ a:hover, a:focus, a:active {
     margin-left: 10%;
 }
 
+.display-4 {
+    margin-top: 55px !important;
+    margin-left: 7% !important;
+}
+
 .button {
     margin-top: 15px;
-    margin-left: 15%;
-    position: unset;
+    margin-left: 15%
 }
 
 .rounded {
@@ -91,6 +95,11 @@ a:hover, a:focus, a:active {
     margin-top: 435px;
 }
 
+#button3 {
+    margin-top: 60px !important;
+}
+
+
 #index {
     width: auto;
     height: 800px;
@@ -98,10 +107,27 @@ a:hover, a:focus, a:active {
     color: white;
 }
 
+#about {
+    width: auto;
+    padding-bottom: 20px;
+    margin-top: 8%;
+    margin-left: 450px;
+    margin-right: 450px;
+}
+
 #about-me {
-    margin-top: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
+    color: white;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+#about-bottom {
+    margin-top: calc(7cm + 10px) !important;
+    color: white;
+}
+
+#title {
+    color: white;
 }
 
 /* Other */
