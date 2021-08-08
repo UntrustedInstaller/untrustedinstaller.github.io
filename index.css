@@ -66,6 +66,29 @@ a:hover, a:focus, a:active {
     margin-left: 10%;
 }
 
+.small-button {
+    padding-top: 5px;
+    padding-right: 20px;
+    height: 95px;
+    width: 596px;
+    color: black;
+    position: fixed;
+}
+
+.small-button img {
+    height: calc(100% + 5px);
+    width: 33.3%;
+    margin-top: -5px;
+    margin-left: -3px;
+    margin-bottom: 0;
+}
+
+.small-button span {
+    position: absolute;
+    margin-top: 4px !important;
+    margin-left: 7% !important;
+}
+
 .display-4 {
     margin-top: 55px !important;
     margin-left: 7% !important;
@@ -99,12 +122,15 @@ a:hover, a:focus, a:active {
     margin-top: 60px !important;
 }
 
+#button4 {
+    margin-top: 30px !important;
+}
+
 
 #index {
     width: auto;
     height: 800px;
     margin: 32px 44px 32px 50% !important;
-    color: white;
 }
 
 #about {
@@ -128,6 +154,14 @@ a:hover, a:focus, a:active {
 
 #title {
     color: white;
+}
+
+#projects {
+    color: white;
+    margin-top: 40px;
+    margin-left: 150px;
+    margin-right: 150px;
+    height: 830px;
 }
 
 /* Other */
