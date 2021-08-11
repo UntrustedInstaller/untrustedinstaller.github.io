@@ -164,6 +164,18 @@ a:hover, a:focus, a:active {
     height: 830px;
 }
 
+#contact-info {
+
+}
+
+#contact {
+    width: auto;
+    padding-bottom: 20px;
+    margin-top: 8%;
+    margin-left: 450px;
+    margin-right: 450px;
+}
+
 /* Other */
 @font-face {
     font-family: Segoe_UI;
