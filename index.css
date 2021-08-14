@@ -126,6 +126,10 @@ a:hover, a:focus, a:active {
     margin-top: 30px !important;
 }
 
+#button4 {
+    margin-top: 30px !important
+}
+
 
 #index {
     width: auto;
@@ -165,11 +169,12 @@ a:hover, a:focus, a:active {
 }
 
 #contact-info {
-
+    color: white;
 }
 
 #contact {
     width: auto;
+    height: 500px;
     padding-bottom: 20px;
     margin-top: 8%;
     margin-left: 450px;
