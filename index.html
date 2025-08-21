@@ -1,256 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.75"/>
-    <title>UNTRUSTEDINSTALLER</title>
-	
-	<link id="favicon" rel="shortcut icon" href="ui.png">
-	
-    <style>
-@font-face {
-  font-family:VCR OSD Mono;
-  src: url("vcr.ttf") format("truetype");
-}
-@font-face {
-  font-family:VCR OSD Mono;
-  src: url("vcr.ttf") format("truetype");
-}
-::-webkit-scrollbar-thumb{
-  width:4px;
-  background-color: #770000;
-}
-/*PSEUDOS*/
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #0c1d12;
-}
-::-webkit-scrollbar{
-  width: 4px;
-	background-color: #0c1d12;
-}
-* {
-  scrollbar-color: #770000 #aaaaaa;
-  scrollbar-width: thin;
-}
-html, body {
-  margin: 0;
-  padding:0;
-  background:#1d0c0c;
-  min-height: 100vh;
-}
-body {
-  position:absolute;
-  width: auto;
-  min-width: 100%;
-
-}
-pre {
-  font-family:VCR OSD Mono;
-  font-size: calc(min(25px, 3.5vw));
-  font-weight:normal;
-  color:#ffffff;
-  line-height: calc(min(25px, 3.5vw));
-  margin:16px; padding: 0;
-  margin-bottom:16px;
-}
-.g {color:#770000}
-.lg {color:#b60000}
-.w {color:#ff0000}
-.by {color:#1d0c0c}
-
-::-moz-selection {color:000000;background:#b60000}
-.g::-moz-selection, .by::-moz-selection {color:#000000}
-.lg::-moz-selection {color:#000000}
-.w::-moz-selection {color:#000000}
-
-::selection {color:#000000;background:#b60000}
-.g::selection, .by::selection {color:#000000}
-.lg::selection {color:#000000}
-.w::selection {color:#000000}
-
-.emphasized { font-style: italic; }
-
-.body {
-  padding:16px 8px 16px 8px;
-  animation: textShadow 1.033s infinite;
-}
-.flicker {
-  pointer-events: none;
-  position: fixed;
-  width: auto;
-  min-width: 100%;
-  height:100%;
-  z-index:15;
-  background: rgba(9, 8, 8, 0.1);
-  animation: flicker 0.3301s infinite;
-}
-.scanline {
-  position:fixed;
-  pointer-events: none;
-  top:0%;
-  width: auto;
-  min-width: 100%;
-  height: 2px;
-  z-index: 10;
-  background: rgba(0, 0, 0, .3);
-  opacity: 0.75;
-  animation: scanline 7.77s linear infinite;
-}
-.scanlines {
-  position:fixed;
-  pointer-events: none;
-  width: auto;
-  min-width: 100%;
-  height:100%;
-  z-index: 5;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  background-size: 100% 2px, 3px 100%;
-}
-
-@keyframes flicker { 0% { opacity: 0.119; } 5% { opacity: 0.02841; } 10% { opacity: 0.35748; } 15% { opacity: 0.88852; } 20% { opacity: 0.9408; } 25% { opacity: 0.35088; } 30% { opacity: 0.22426; } 35% { opacity: 0.26418; } 40% { opacity: 0.09249; } 45% { opacity: 0.35312; } 50% { opacity: 0.89436; } 55% { opacity: 0.9574; } 60% { opacity: 0.19754; } 65% { opacity: 0.05086; } 70% { opacity: 0.12137; } 75% { opacity: 0.75791; } 80% { opacity: 0.89617; } 85% { opacity: 0.90183; } 90% { opacity: 0.20657; } 95% { opacity: 0.64125; } 100% { opacity: 0.78042; }}
-/* ANIMATE UNIQUE SCANLINE */
-@keyframes scanline {
-  0% {
-    top:99%;
-  }
-}
-@keyframes scanlines {
-  0% {
-    background-position: 0 50%;
-  }
-}
-@keyframes textShadow {
-  0% {
-    text-shadow: 0.4389924193300864px 0 1px rgba(255, 156, 156, 0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  5% {
-    text-shadow: 2.7928974010788217px 0 1px rgba(255, 156, 156, 0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  10% {
-    text-shadow: 0.02956275843481219px 0 1px rgba(255, 156, 156, 0.5), -0.02956275843481219px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  15% {
-    text-shadow: 0.40218538552878136px 0 1px rgba(255, 156, 156, 0.5), -0.40218538552878136px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  20% {
-    text-shadow: 3.4794037899852017px 0 1px rgba(255, 156, 156, 0.5), -3.4794037899852017px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  25% {
-    text-shadow: 1.6125630401149584px 0 1px rgba(255, 156, 156, 0.5), -1.6125630401149584px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  30% {
-    text-shadow: 0.7015590085143956px 0 1px rgba(255, 156, 156, 0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  35% {
-    text-shadow: 3.896914047650351px 0 1px rgba(255, 156, 156, 0.5), -3.896914047650351px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  40% {
-    text-shadow: 3.870905614848819px 0 1px rgba(255, 156, 156, 0.5), -3.870905614848819px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  45% {
-    text-shadow: 2.231056963361899px 0 1px rgba(255, 156, 156, 0.5), -2.231056963361899px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  50% {
-    text-shadow: 0.08084290417898504px 0 1px rgba(255, 156, 156, 0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  55% {
-    text-shadow: 2.3758461067427543px 0 1px rgba(255, 156, 156, 0.5), -2.3758461067427543px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  60% {
-    text-shadow: 2.202193051050636px 0 1px rgba(255, 156, 156, 0.5), -2.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  65% {
-    text-shadow: 2.8638780614874975px 0 1px rgba(255, 156, 156, 0.5), -2.8638780614874975px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  70% {
-    text-shadow: 0.48874025155497314px 0 1px rgba(255, 156, 156, 0.5), -0.48874025155497314px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  75% {
-    text-shadow: 1.8948491305757957px 0 1px rgba(255, 156, 156, 0.5), -1.8948491305757957px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  80% {
-    text-shadow: 0.0833037308038857px 0 1px rgba(255, 156, 156, 0.5), -0.0833037308038857px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  85% {
-    text-shadow: 0.09769827255241735px 0 1px rgba(255, 156, 156, 0.5), -0.09769827255241735px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  90% {
-    text-shadow: 3.443339761481782px 0 1px rgba(255, 156, 156, 0.5), -3.443339761481782px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  95% {
-    text-shadow: 2.1841838852799786px 0 1px rgba(255, 156, 156, 0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  100% {
-    text-shadow: 2.6208764473832513px 0 1px rgba(255, 156, 156, 0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-}
-@keyframes glitch-skew {
-    0% {
-        transform: skew(0deg, 0deg);
-    }
-    48% {
-        transform: skew(0deg, 0deg);
-        filter: blur(0);
-    }
-    50% {
-        transform: skew(-20deg, 0deg);
-        filter: blur(4px);
-    }
-    52% {
-        transform: skew(20deg, 0deg);
-    }
-    54% {
-        transform: skew(0deg, 0deg);
-        filter: blur(0);
-    }
-    100% {
-        transform: skew(0deg, 0deg);
-    }
-
-}
-
-a, a:visited {
-  color: #1b0000;
-  text-shadow: 1px 1px 2px #ff0000, 0 0 1vmin #ff0000, 0 0 5px #ff0000;
-  text-decoration: none;
-}
-a:hover, hr {
-  color: #ff0000;
-}
-    </style>
-  </head>
-  <body>
-<div class="scanlines"></div>
-<div class="scanline"></div>
-<div class="flicker"></div>
-<div class="body">
-
-
-
-<pre> <font style="font-size: calc(min(25px, 3.8vw)); line-height: calc(min(25px, 3.8vw));"><a href="https://untrustedinstaller.github.io">HOME</a> | <a href="about.html">ABOUT</a> | <a href="404.html">UNKNOWN</a> | <a href="mailto:untrustedinstaller1201@protonmail.com">CONTACT</a></font>
-</pre>
-
-<pre> 
-    <font style="font-size: calc(min(25px, 3.8vw)); line-height: calc(min(25px, 3.8vw));"></font>
-     _   _ _   _ ___________ _   _ _____ _____ ___________                   
-    | | | | \ | |_   _| ___ | | | /  ___|_   _|  ___|  _  \                  
-    | | | |  \| | | | | |_/ | | | \ `--.  | | | |__ | | | |                  
-    | | | | . ` | | | |    /| | | |`--. \ | | |  __|| | | |                  
-    | |_| | |\  | | | | |\ \| |_| /\__/ / | | | |___| |/ /                   
-     \___/\_| \_/ \_/ \_|_\_|\___/\____/ _\_/_\____/|___/ _     ___________  
-                      |_   _| \ | /  ___|_   _/ _ \| |   | |   |  ___| ___ \ 
-                        | | |  \| \ `--.  | |/ /_\ | |   | |   | |__ | |_/ / 
-                        | | | . ` |`--. \ | ||  _  | |   | |   |  __||    /  
-                       _| |_| |\  /\__/ / | || | | | |___| |___| |___| |\ \  
-                       \___/\_| \_\____/  \_/\_| |_\_____\_____\____/\_| \_| 
-                                                                             
-</pre>    
-
-
-<pre class="lg"><font style="font-size: calc(min(22px, 3.24vw)); line-height: calc(min(25px, 3.8vw));" ><span class="w"> PROFESSIONAL DUMBASS </SPAN></font></pre>
-</pre>
-
-</div>
+<html>
+<head>
+	<title>UntrustedInstaller - Home</title>
+	<link rel="icon" type="image/x-icon" href="ui.png">
+	<style>
+		body {
+			background-color: #fff;
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			color: #000080;
+			margin: 0;
+			padding: 0;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+		}
+		.container {
+			width: 100%;
+			margin: 0;
+			background: #fff;
+			flex: 1 0 auto;
+			display: flex;
+			flex-direction: column;
+		}
+		.header {
+			background: #e6e6e6;
+			height: 60px;
+			padding-left: 10px;
+			border-bottom: 1px solid #ccc;
+		}
+		.header .logo {
+			float: left;
+			height: 60px;
+			width: 300px;
+		}
+		.header .mslogo {
+			float: right;
+			font-size: 1.5em;
+			font-weight: bold;
+			margin-top: 20px;
+			margin-right: 20px;
+		}
+		.nav {
+			background-color: #6699cc;
+			color: #fff;
+			padding: 6px 0 6px 10px;
+			font-size: 15px;
+			border-bottom: 2px solid #003399;
+		}
+		.nav a {
+			color: #fff;
+			text-decoration: none;
+			margin-right: 18px;
+			font-weight: bold;
+		}
+		.content-table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 0;
+		}
+		.sidebar {
+			width: 20%;
+			background: #fff;
+			vertical-align: top;
+			font-size: 13px;
+			border-right: 1px solid #ccc;
+			padding: 10px 0 10px 10px;
+		}
+		.sidebar b {
+			color: #003399;
+			font-size: 14px;
+		}
+		.sidebar ul {
+			list-style: none;
+			padding-left: 0;
+		}
+		.sidebar li {
+			margin-bottom: 4px;
+		}
+		.main {
+			padding: 2vw 2vw 2vw 2vw;
+			vertical-align: top;
+			width: 78%;
+		}
+		.main h2 {
+			font-size: 18px;
+			color: #003399;
+			margin-top: 0;
+		}
+		.main a {
+			color: #003399;
+			text-decoration: underline;
+		}
+		.footer {
+			background-color: #e6e6e6;
+			color: #333;
+			text-align: left;
+			padding: 10px 0 10px 10px;
+			font-size: 12px;
+			border-top: 1px solid #cccccc;
+			margin-top: auto;
+		}
+		.clear { clear: both; }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="logo"></div>
+			<div class="mslogo">UntrustedInstaller</div>
+			<div class="clear"></div>
+		</div>
+		<div class="nav">
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+			<a href="contact.html">Contact</a>
+		</div>
+		<table class="content-table">
+			<tr>
+				<td class="sidebar" valign="top">
+					<b>Projects</b>
+					<ul>
+						<li><a href="https://github.com/UntrustedInstaller/osmium">OsmiumOS</a></li>
+						<li><a href="hobbies.html">Non-programming projects</a></li>
+						<li><a href="https://github.com/UntrustedInstaller/untrustedinstaller.github.io">Website source code</a></li>
+					</ul>
+					<b>Socials</b>
+					<ul>
+						<li><a href="https://www.youtube.com/channel/UCKkwvn115rJzwLfpjjWH5ng">YouTube</a></li>
+						<li><a href="https://github.com/UntrustedInstaller">GitHub</a></li>
+                        <li><a href="https://x.com/untrustedinst">Twitter (X)</a></li>
+					</ul>
+				</td>
+				<td class="main" valign="top">
+					<h2>Welcome to my webpage!</h2>
+					<p>This is the landing page for my website, here you can find links to information about my work/me, my socials, and where to contact.</p>
+					<table width="100%" cellpadding="4" cellspacing="0" border="0">
+						<tr>
+							<td width="50%" valign="top">
+								<b>Latest News</b>
+								<ul>
+									<li><a href="#">Redesigned website!</a></li>
+								</ul>
+							</td>
+							<td width="50%" valign="top">
+								<b>Quick Links</b>
+								<ul>
+									<li><a href="https://github.com/UntrustedInstaller/untrustedinstaller.github.io">GitHub</a></li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="footer">
+			Last Updated: 21/8/25<br>
+			&copy;2025 UntrustedInstaller All rights reserved.
+		</div>
+	</div>
 </body>
 </html>
