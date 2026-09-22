@@ -1,30 +1,24 @@
 /*
- * SYSTEM_PORTAL - shared stylesheet
+ * SYSTEM_PORTAL - shared stylesheet (Deep Navy edition)
  *
  * Compatibility floor: Internet Explorer 5.5 (Windows 98), RetroZilla 1.x,
- * Netscape Navigator 4.7, and everything modern.
+ * Netscape Navigator 4.7, and modern browsers.
  *
- * Deliberately limited to CSS1 (plus the lightest, safest CSS2 touches that
- * IE 5.5 handles).  No flexbox, no grid, no media queries, no position:fixed,
- * no CSS variables, no border-radius.  Every visual keeps an inline-attribute
- * fallback in the HTML (bgcolor, align, width...) so pages still look right if
- * the stylesheet is ignored.
+ * Strictly CSS 1. No flexbox, no grid, no media queries, no position:fixed,
+ * no CSS variables, no border-radius. Every visual keeps an HTML-attribute
+ * fallback (bgcolor, align, width...) so the pages still look right if the
+ * stylesheet is ignored. All colors are web-safe (8-bit display friendly).
  */
 
 body {
-    background-color: #003366;
-    color: #000000;
+    background-color: #000033;
+    color: #cccccc;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 12px;
-    line-height: 1.4;
-    margin: 10px 10px 30px 10px;
+    line-height: 1.45;
+    margin: 18px 10px 30px 10px;
     padding: 0px;
 }
-
-a:link { color: #000080; text-decoration: underline; }
-a:visited { color: #800080; text-decoration: underline; }
-a:hover { color: #cc0000; text-decoration: none; }
-a:active { color: #cc0000; text-decoration: underline; }
 
 /* ------------------------------------------------------------------ */
 /* Masthead                                                            */
@@ -32,139 +26,161 @@ a:active { color: #cc0000; text-decoration: underline; }
 .masthead {
     background-color: #000033;
     color: #ffffff;
-    padding: 12px 16px 10px 16px;
-    border-bottom: 4px solid #008080;
+    padding: 14px 16px 10px 16px;
+    border-bottom: 1px solid #008080;
 }
 
 .masthead-title {
-    font-family: "Courier New", Courier, monospace;
     font-size: 26px;
     font-weight: bold;
     color: #ffffff;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
 
-.masthead-title .accent { color: #66cccc; }
+.masthead-title .accent { color: #00cccc; }
 
 .masthead-sub {
+    font-family: "Courier New", Courier, monospace;
     font-size: 11px;
-    color: #99ccff;
-}
-
-/* ------------------------------------------------------------------ */
-/* Top navigation bar                                                  */
-/* ------------------------------------------------------------------ */
-.navbar {
-    background-color: #c0c0c0;
-    padding: 6px 12px 6px 12px;
-    border-bottom: 1px solid #003366;
-    font-size: 11px;
-    font-weight: bold;
+    color: #66cccc;
     letter-spacing: 1px;
 }
 
-.navbar a:link, .navbar a:visited {
-    color: #000080;
-    text-decoration: none;
-    padding: 1px 6px 1px 6px;
+/* ------------------------------------------------------------------ */
+/* Banner ticker                                                       */
+/* ------------------------------------------------------------------ */
+.ticker {
+    background-color: #003366;
+    color: #99ccff;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 5px 12px 5px 12px;
+    border-top: 1px solid #008080;
+    border-bottom: 1px solid #008080;
 }
 
-.navbar a:hover, .navbar a:active {
-    color: #cc0000;
-    text-decoration: underline;
+/* ------------------------------------------------------------------ */
+/* Navigation                                                          */
+/* ------------------------------------------------------------------ */
+.navstrip {
+    background-color: #003366;
+    padding: 8px 12px 8px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #008080;
 }
+
+.navstrip a:link, .navstrip a:visited {
+    color: #99ccff;
+    text-decoration: none;
+    padding: 2px 8px 2px 8px;
+}
+
+.navstrip a:hover { color: #ffcc00; }
 
 .nav-current {
-    background-color: #008080;
-    color: #ffffff;
-    padding: 2px 6px 2px 6px;
+    color: #ffcc00;
+    background-color: #000033;
+    padding: 2px 8px 2px 8px;
 }
+
+.nav-sep { color: #008080; }
 
 /* ------------------------------------------------------------------ */
 /* Sidebar                                                             */
 /* ------------------------------------------------------------------ */
 .sidebar {
-    background-color: #cccccc;
-    border-right: 1px solid #999999;
-    padding: 10px 8px 12px 8px;
+    background-color: #001133;
+    border-right: 1px solid #008080;
+    padding: 12px 10px 14px 10px;
     vertical-align: top;
 }
 
-.sidemenuhead {
-    background-color: #008080;
-    color: #ffffff;
+.sidetitle {
+    color: #00cccc;
+    font-size: 10px;
     font-weight: bold;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #008080;
+    margin: 0px 0px 7px 0px;
+    padding: 0px 0px 3px 0px;
+}
+
+.sidelist {
     font-size: 11px;
-    letter-spacing: 1px;
-    padding: 4px 6px 4px 6px;
-    margin-bottom: 6px;
+    line-height: 2.0;
+    margin: 4px 2px 14px 2px;
 }
 
-.sidebar p, .sidebar div {
-    margin: 6px 2px 12px 2px;
-    padding: 0px;
+.sidelist a:link, .sidelist a:visited { color: #99ccff; text-decoration: none; }
+.sidelist a:hover { color: #ffcc00; text-decoration: underline; }
+
+.side-current { color: #ffcc00; font-weight: bold; }
+
+.sideinfo {
+    font-size: 10px;
+    color: #999999;
+    line-height: 1.8;
+    margin: 4px 2px 14px 2px;
 }
 
-.sidemenu {
-    font-size: 11px;
-    line-height: 1.9;
-}
+.sideinfo b { color: #cccccc; }
+.sideinfo a:link, .sideinfo a:visited { color: #99ccff; }
+.sideinfo a:hover { color: #ffcc00; }
 
-.sidemenu a:link, .sidemenu a:visited {
-    color: #003366;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.sidemenu a:hover, .sidemenu a:active {
-    color: #cc0000;
-    text-decoration: underline;
-}
-
-.menu-current {
-    color: #cc0000;
-    font-weight: bold;
+.sidecounter {
+    border: 1px solid #008080;
+    background-color: #000033;
+    padding: 6px 4px 6px 4px;
+    text-align: center;
+    margin: 4px 2px 14px 2px;
 }
 
 /* ------------------------------------------------------------------ */
 /* Main content                                                        */
 /* ------------------------------------------------------------------ */
 .content {
-    background-color: #ffffff;
+    background-color: #cccccc;
+    color: #000000;
     padding: 14px 18px 20px 18px;
     vertical-align: top;
 }
 
 .page-title {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: bold;
     color: #003366;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin: 0px 0px 6px 0px;
     padding: 0px;
 }
 
 /* ------------------------------------------------------------------ */
-/* Boxes                                                               */
+/* Panels                                                              */
 /* ------------------------------------------------------------------ */
-.box {
+.panel {
     border: 1px solid #669999;
-    margin-bottom: 16px;
+    background-color: #ffffff;
+    padding: 10px 12px 10px 12px;
+    margin-bottom: 14px;
 }
 
-.box-head {
-    background-color: #003366;
-    color: #ffffff;
-    font-weight: bold;
+.panel-head {
+    color: #003366;
     font-size: 11px;
-    letter-spacing: 1px;
-    padding: 5px 8px 5px 8px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #669999;
+    margin: 0px 0px 7px 0px;
+    padding: 0px 0px 3px 0px;
 }
 
-.box-body {
-    padding: 9px 10px 10px 10px;
-}
+.content a:link { color: #006666; }
+.content a:visited { color: #663366; }
+.content a:hover { color: #cc0000; text-decoration: none; }
+.content a:active { color: #cc0000; }
 
 /* ------------------------------------------------------------------ */
 /* Text helpers                                                        */
@@ -177,7 +193,7 @@ a:active { color: #cc0000; text-decoration: underline; }
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
     font-size: 11px;
-    color: #cc0000;
+    color: #006666;
     white-space: nowrap;
     padding-right: 10px;
 }
@@ -188,8 +204,9 @@ a:active { color: #cc0000; text-decoration: underline; }
     background-color: #000000;
     color: #00ff00;
     font-size: 11px;
-    line-height: 1.5;
+    line-height: 1.6;
     padding: 10px 12px 10px 12px;
+    border: 1px solid #008080;
 }
 
 .term .prompt { color: #ffff00; font-weight: bold; }
@@ -204,7 +221,7 @@ table.data {
 
 table.data th {
     background-color: #003366;
-    color: #ffffff;
+    color: #99ccff;
     font-size: 11px;
     font-weight: bold;
     text-align: left;
@@ -222,18 +239,26 @@ table.data td {
 table.data tr.alt td { background-color: #ccffff; }
 
 /* ------------------------------------------------------------------ */
+/* Project status labels                                               */
+/* ------------------------------------------------------------------ */
+.status-live { color: #006600; font-weight: bold; }
+.status-wip { color: #993300; font-weight: bold; }
+.status-paused { color: #666666; font-weight: bold; }
+.status-planned { color: #333399; font-weight: bold; }
+
+/* ------------------------------------------------------------------ */
 /* Footer + badges                                                     */
 /* ------------------------------------------------------------------ */
 .footer {
-    background-color: #c0c0c0;
-    border-top: 1px solid #003366;
-    padding: 8px 10px 10px 10px;
+    background-color: #000033;
+    border-top: 1px solid #008080;
+    padding: 10px 12px 12px 12px;
     text-align: center;
     font-size: 10px;
-    color: #333333;
-    line-height: 1.7;
+    color: #666699;
+    line-height: 1.8;
 }
 
-.footer a:link, .footer a:visited { color: #000080; }
+.footer a:link, .footer a:visited { color: #99ccff; }
 
 .badge-row img { margin: 2px; }

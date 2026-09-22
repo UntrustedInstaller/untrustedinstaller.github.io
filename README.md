@@ -4,6 +4,9 @@ A retro-compatible personal web space, built to look "late 90s" while keeping th
 modern conveniences of a simple static site. It renders natively in **Internet
 Explorer 5.5 on Windows 98**, **RetroZilla 1.x**, and modern browsers.
 
+Design: the "Deep Navy" look - deep navy page, slate and teal chrome, soft
+silver reading panel, gold "you are here" accents. Tables + CSS 1 only.
+
 Live at: https://untrustedinstaller.github.io/
 
 ## Pages
@@ -42,8 +45,9 @@ The floor is **IE 5.5 on Windows 98**; everything else is a bonus. The rules:
 - The nav bar, sidebar, and footer are duplicated in each page - that is how the
   90s did it (there is no build step). Change them in all six files or keep
   them consistent.
-- Some details are still marked `TBD` on the specs page and a placeholder
-  e-mail lives on the contact page - swap in the real values.
+- The hardware rows on the specs page are still marked `TBD` and the contact
+  page e-mail is intentionally unpublished (reachable via GitHub for now) -
+  swap in the real values as they arrive.
 - To add a page: copy an existing one, change the `<title>`, the nav
   (`nav-current` marks the active page), and the sidebar menu highlight.
 

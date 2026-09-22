@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="viewport" content="width=760">
+    <title>SKETCH C - Deep Navy</title>
+    <style type="text/css">
+    <!--
+    /* SKETCH C: deep navy, slate and teal. Dark, calm, readable -
+       the middle ground between desktop chrome and glaring ivory.
+       CSS 1 only; every visual has an HTML-attribute fallback. */
+
+    body {
+        background-color: #000033;
+        color: #cccccc;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 1.45;
+        margin: 18px 10px 30px 10px;
+        padding: 0px;
+    }
+
+    /* --- masthead --- */
+    .masthead {
+        background-color: #000033;
+        color: #ffffff;
+        padding: 14px 16px 10px 16px;
+        border-bottom: 1px solid #008080;
+    }
+    .masthead-title {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 26px;
+        font-weight: bold;
+        color: #ffffff;
+        letter-spacing: 4px;
+    }
+    .masthead-title .accent { color: #00cccc; }
+    .masthead-sub {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 11px;
+        color: #66cccc;
+        letter-spacing: 1px;
+    }
+
+    /* --- banner ticker --- */
+    .ticker {
+        background-color: #003366;
+        color: #99ccff;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 10px;
+        letter-spacing: 2px;
+        padding: 5px 12px 5px 12px;
+        border-top: 1px solid #008080;
+        border-bottom: 1px solid #008080;
+    }
+
+    /* --- navigation --- */
+    .navstrip {
+        background-color: #003366;
+        padding: 8px 12px 8px 12px;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        border-bottom: 2px solid #008080;
+    }
+    .navstrip a:link, .navstrip a:visited {
+        color: #99ccff;
+        text-decoration: none;
+        padding: 2px 8px 2px 8px;
+    }
+    .navstrip a:hover { color: #ffcc00; }
+    .nav-current {
+        color: #ffcc00;
+        background-color: #000033;
+        padding: 2px 8px 2px 8px;
+    }
+    .nav-sep { color: #008080; }
+
+    /* --- columns --- */
+    .sidebar {
+        background-color: #001133;
+        border-right: 1px solid #008080;
+        padding: 12px 10px 14px 10px;
+        vertical-align: top;
+        width: 180px;
+    }
+    .content {
+        background-color: #c0c0c0;
+        color: #111111;
+        padding: 14px 18px 20px 18px;
+        vertical-align: top;
+    }
+
+    /* --- sidebar pieces --- */
+    .sidetitle {
+        color: #00cccc;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        border-bottom: 1px solid #008080;
+        margin: 0px 0px 7px 0px;
+        padding: 0px 0px 3px 0px;
+    }
+    .sidelist { font-size: 11px; line-height: 2.0; margin: 4px 2px 14px 2px; }
+    .sidelist a:link, .sidelist a:visited { color: #99ccff; text-decoration: none; }
+    .sidelist a:hover { color: #ffcc00; text-decoration: underline; }
+    .side-current { color: #ffcc00; font-weight: bold; }
+    .sideinfo { font-size: 10px; color: #999999; line-height: 1.8; }
+    .sideinfo b { color: #cccccc; }
+    .sidecounter {
+        border: 1px solid #008080;
+        background-color: #000033;
+        padding: 6px 4px 6px 4px;
+        text-align: center;
+        margin: 4px 2px 14px 2px;
+    }
+
+    /* --- content pieces --- */
+    .page-title {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        font-weight: bold;
+        color: #003366;
+        letter-spacing: 2px;
+        margin: 0px 0px 4px 0px;
+        padding: 0px;
+    }
+    .panel {
+        border: 1px solid #669999;
+        background-color: #e9e9e9;
+        padding: 10px 12px 10px 12px;
+        margin-bottom: 14px;
+    }
+    .panel-head {
+        color: #003366;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        border-bottom: 1px solid #669999;
+        margin: 0px 0px 7px 0px;
+        padding: 0px 0px 3px 0px;
+    }
+    .content a:link { color: #006666; }
+    .content a:visited { color: #663366; }
+    .content a:hover { color: #cc0000; text-decoration: none; }
+
+    .news-date {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        font-size: 11px;
+        color: #006666;
+        white-space: nowrap;
+        padding-right: 10px;
+    }
+
+    .term {
+        font-family: "Courier New", Courier, monospace;
+        background-color: #000000;
+        color: #00ff00;
+        font-size: 11px;
+        line-height: 1.6;
+        padding: 10px 12px 10px 12px;
+        border: 1px solid #008080;
+    }
+    .term .prompt { color: #ffff00; }
+    .term .tag { color: #ffffff; }
+
+    /* --- footer --- */
+    .footer {
+        background-color: #000033;
+        border-top: 1px solid #008080;
+        padding: 10px 12px 12px 12px;
+        text-align: center;
+        font-size: 10px;
+        color: #666699;
+        line-height: 1.8;
+    }
+    .footer a:link, .footer a:visited { color: #99ccff; }
+    -->
+    </style>
+</head>
+<body bgcolor="#000033" text="#cccccc" link="#99ccff" vlink="#9999ff" alink="#ffcc00">
+
+<table align="center" width="760" border="0" cellspacing="0" cellpadding="0">
+
+    <!-- ============ MASTHEAD ============ -->
+    <tr>
+        <td colspan="2" class="masthead" bgcolor="#000033">
+            <span class="masthead-title">SYSTEM<span class="accent">_</span>PORTAL</span><br>
+            <span class="masthead-sub">:: untrustedinstaller / personal web space / built 2026 / javascript: none</span>
+        </td>
+    </tr>
+
+    <!-- ============ BANNER TICKER ============ -->
+    <tr>
+        <td colspan="2" class="ticker" bgcolor="#003366">
+            &gt; 800x600-SAFE &middot; HTML 4.01 &middot; CSS 1 &middot; IE 5.5 &amp; RETROZILLA NATIVE &middot; WORKS EVERYWHERE
+        </td>
+    </tr>
+
+    <!-- ============ NAV ============ -->
+    <tr>
+        <td colspan="2" class="navstrip" bgcolor="#003366">
+            <span class="nav-current">HOME</span><span class="nav-sep"> / </span>
+            <a href="#">ABOUT</a><span class="nav-sep"> / </span>
+            <a href="#">PROJECTS</a><span class="nav-sep"> / </span>
+            <a href="#">SPECS</a><span class="nav-sep"> / </span>
+            <a href="#">LINKS</a><span class="nav-sep"> / </span>
+            <a href="#">CONTACT</a>
+        </td>
+    </tr>
+
+    <!-- ============ BODY ============ -->
+    <tr valign="top">
+
+        <td class="sidebar" width="180" bgcolor="#001133">
+            <div class="sidetitle">INDEX</div>
+            <p class="sidelist">
+                &raquo; <span class="side-current">Home</span><br>
+                &raquo; <a href="#">About</a><br>
+                &raquo; <a href="#">Projects</a><br>
+                &raquo; <a href="#">System Specs</a><br>
+                &raquo; <a href="#">Links</a><br>
+                &raquo; <a href="#">Contact</a>
+            </p>
+
+            <div class="sidetitle">SITE DATA</div>
+            <p class="sideinfo">
+                <b>Status:</b> Online<br>
+                <b>Updated:</b> 21 Sep 2026<br>
+                <b>Form:</b> HTTP (no scripts)<br>
+                <b>Uptime:</b> since launch
+            </p>
+
+            <div class="sidetitle">VISITORS</div>
+            <div class="sidecounter">
+                <img src="https://www.hitwebcounter.com/counter/counter.php?page=21520490&amp;style=0010&amp;nbdigits=000006&amp;type=page" alt="visitor counter" style="border:0"><br>
+                <span class="sideinfo" style="color:#66cccc">hits since 21 Sep 2026</span>
+            </div>
+        </td>
+
+        <td class="content" width="580" bgcolor="#c0c0c0">
+            <h1 class="page-title">WELCOME TO THE PORTAL</h1>
+            <hr size="2" color="#008080" noshade>
+
+            <p>
+                This is <b>untrustedinstaller</b>'s corner of the web - written by hand in HTML 4.01,
+                laid out with tables, styled with CSS 1, and free of JavaScript. It renders natively
+                on vintage hardware (IE 5.5 and RetroZilla on Windows 98) and stays crisp on modern
+                screens.
+            </p>
+
+            <div class="panel">
+                <div class="panel-head">LATEST UPDATES</div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                    <tr>
+                        <td width="100"><span class="news-date">21 Sep 2026</span></td>
+                        <td>Rebuilt from scratch, by hand. Six pages, one stylesheet, zero scripts.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="news-date">21 Sep 2026</span></td>
+                        <td>Rendering verified against IE 5.5 and RetroZilla at 800x600, 16-bit color.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="panel">
+                <div class="panel-head">WHERE TO NEXT</div>
+                <p>&raquo; <a href="#">About</a> - why the site looks the way it does.<br>
+                   &raquo; <a href="#">Projects</a> - what is being built, and how it is going.<br>
+                   &raquo; <a href="#">System Specs</a> - the machines in the fleet.<br>
+                   &raquo; <a href="#">Links</a> - hand-picked places to visit.</p>
+            </div>
+
+            <div class="term">
+                <span class="prompt">C:\&gt;</span> NET SEND SYSTEM_PORTAL<br>
+                All systems nominal. JavaScript: <span class="tag">NOT REQUIRED</span>.<br>
+                <span class="prompt">C:\&gt;</span><span class="tag">_</span>
+            </div>
+        </td>
+    </tr>
+
+    <!-- ============ FOOTER ============ -->
+    <tr>
+        <td colspan="2" class="footer" bgcolor="#000033">
+            Copyright &copy; 2026 untrustedinstaller &middot; Some rights reserved.<br>
+            Hand-coded HTML 4.01 &middot; CSS 1 &middot; Best viewed at 800x600 &middot; works on anything<br>
+            <span>
+                <img src="img/badge-html401.gif" alt="HTML 4.01 valid" width="88" height="31">
+                <img src="img/badge-800x600.gif" alt="Best viewed 800x600" width="88" height="31">
+                <img src="img/badge-nojs.gif" alt="No JavaScript required" width="88" height="31">
+            </span>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>

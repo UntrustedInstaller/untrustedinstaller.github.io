@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="viewport" content="width=780">
+    <title>SKETCH A - Dark Beveled Workstation</title>
+    <style type="text/css">
+    <!--
+    /* SKETCH A: SGI / Windows-98-inspired dark workstation chrome.
+       Companion to SKETCH B (corporate ivory). Pick one. */
+
+    body {
+        background-color: #000000;
+        color: #000000;
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        margin: 24px 10px 24px 10px;
+        padding: 0px;
+    }
+
+    /* --- the classic 90s bevel: raised / sunken via border colors --- */
+    .raised  { border-style: solid; border-color: #ffffff #404040 #404040 #ffffff; border-width: 2px; }
+    .sunken  { border-style: solid; border-color: #404040 #ffffff #ffffff #404040; border-width: 2px; }
+    .sunken-w{ border-style: solid; border-color: #808080 #ffffff #ffffff #808080; border-width: 2px; }
+
+    /* --- window title bar --- */
+    .titlebar {
+        background-color: #000080;
+        color: #ffffff;
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 4px 6px 4px 8px;
+    }
+    .tbutton {
+        background-color: #c0c0c0;
+        color: #000000;
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        padding: 1px 5px 1px 5px;
+        margin-left: 3px;
+    }
+
+    /* --- menu bar / nav buttons --- */
+    .menubar {
+        background-color: #c0c0c0;
+        padding: 4px 6px 4px 6px;
+        border-bottom: 1px solid #000000;
+    }
+    .navbutton {
+        background-color: #c0c0c0;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 2px 10px 2px 10px;
+        margin-right: 4px;
+    }
+    .navbutton a:link, .navbutton a:visited { color: #000000; text-decoration: none; }
+    .navbutton a:hover { color: #000080; text-decoration: underline; }
+    .navbutton-active {
+        background-color: #c0c0c0;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 2px 10px 2px 10px;
+        margin-right: 4px;
+        color: #000080;
+    }
+
+    /* --- left explorer panel --- */
+    .explorer {
+        background-color: #c0c0c0;
+        padding: 6px 8px 10px 8px;
+        vertical-align: top;
+        width: 170px;
+    }
+    .exphead {
+        background-color: #000080;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 3px 5px 3px 5px;
+    }
+    .expitem {
+        padding: 2px 4px 2px 4px;
+        font-size: 11px;
+    }
+    .expitem a:link, .expitem a:visited { color: #000000; text-decoration: none; }
+    .expitem a:hover { color: #000080; text-decoration: underline; }
+    .exp-current { color: #000080; font-weight: bold; }
+
+    /* --- main content --- */
+    .content {
+        background-color: #ffffff;
+        padding: 12px 14px 14px 14px;
+        vertical-align: top;
+        border-left: 2px solid #000000;
+    }
+    .ctitle {
+        background-color: #000080;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 11px;
+        padding: 3px 8px 3px 8px;
+    }
+    .cbox {
+        border: 1px solid #808080;
+        border-top: 0px;
+        padding: 8px 10px 8px 10px;
+        margin-bottom: 12px;
+        background-color: #ffffff;
+    }
+    a:link { color: #0000ff; text-decoration: underline; }
+    a:visited { color: #800080; text-decoration: underline; }
+    a:hover { color: #ff0000; text-decoration: none; }
+
+    .term {
+        font-family: "Courier New", Courier, monospace;
+        background-color: #000000;
+        color: #00ff00;
+        font-size: 11px;
+        padding: 8px 10px 8px 10px;
+        margin-bottom: 12px;
+    }
+
+    /* --- status bar --- */
+    .statusbar {
+        background-color: #c0c0c0;
+        padding: 3px 6px 3px 6px;
+        font-size: 10px;
+        color: #000000;
+    }
+    .statuscell {
+        border: 1px solid #ffffff;
+        border-bottom-color: #808080;
+        border-right-color: #808080;
+        padding: 2px 8px 2px 8px;
+        background-color: #c0c0c0;
+    }
+    -->
+    </style>
+</head>
+<body bgcolor="#000000" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+
+<table align="center" width="780" border="0" cellspacing="0" cellpadding="0" class="raised" bgcolor="#c0c0c0">
+
+    <!-- ============ WINDOW TITLE BAR ============ -->
+    <tr>
+        <td class="titlebar" bgcolor="#000080">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>SYSTEM_PORTAL - Retro Workstation Edition</td>
+                    <td align="right">
+                        <span class="tbutton raised">[-]</span><span class="tbutton raised">[&nbsp;&nbsp;]</span><span class="tbutton raised">[X]</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- ============ MENU BAR ============ -->
+    <tr>
+        <td class="menubar" bgcolor="#c0c0c0">
+            <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td><span class="navbutton-active sunken">HOME</span></td>
+                    <td><span class="navbutton raised"><a href="#">ABOUT</a></span></td>
+                    <td><span class="navbutton raised"><a href="#">PROJECTS</a></span></td>
+                    <td><span class="navbutton raised"><a href="#">SPECS</a></span></td>
+                    <td><span class="navbutton raised"><a href="#">LINKS</a></span></td>
+                    <td><span class="navbutton raised"><a href="#">CONTACT</a></span></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- ============ WORKSPACE ============ -->
+    <tr valign="top">
+
+        <!-- left: explorer-style navigation -->
+        <td class="explorer" width="170" bgcolor="#c0c0c0">
+            <table class="sunken-w" width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#c0c0c0">
+                <tr><td class="exphead">Place</td></tr>
+                <tr><td class="expitem">&raquo; <span class="exp-current">Home</span></td></tr>
+                <tr><td class="expitem">&raquo; <a href="#">About</a></td></tr>
+                <tr><td class="expitem">&raquo; <a href="#">Projects</a></td></tr>
+                <tr><td class="expitem">&raquo; <a href="#">System Specs</a></td></tr>
+                <tr><td class="expitem">&raquo; <a href="#">Links</a></td></tr>
+                <tr><td class="expitem">&raquo; <a href="#">Contact</a></td></tr>
+            </table>
+            <p>&nbsp;</p>
+            <table class="sunken-w" width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#c0c0c0">
+                <tr><td class="exphead">Status</td></tr>
+                <tr><td class="expitem"><b>Online</b></td></tr>
+                <tr><td class="expitem">Updated 21 Sep 2026</td></tr>
+                <tr><td class="expitem">JS: none required</td></tr>
+            </table>
+            <p>&nbsp;</p>
+            <table class="sunken-w" width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#c0c0c0">
+                <tr><td class="expitem">Visitor count</td></tr>
+                <tr><td align="center" bgcolor="#ffffff">
+                    <img src="https://www.hitwebcounter.com/counter/counter.php?page=21520490&amp;style=0010&amp;nbdigits=000006&amp;type=page" alt="visitor counter" style="border:0">
+                </td></tr>
+            </table>
+        </td>
+
+        <!-- right: content -->
+        <td class="content" bgcolor="#ffffff">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td class="ctitle" bgcolor="#000080">Welcome to the Portal</td>
+                </tr>
+                <tr>
+                    <td class="cbox">
+                        <p>This is <b>untrustedinstaller</b>'s web space - built the old way: hand-coded
+                        HTML 4.01, table layout, CSS 1, and not a single line of JavaScript. It renders
+                        natively on Windows 98 boxes (IE 5.5, RetroZilla) and looks right at home on any
+                        modern screen.</p>
+                    </td>
+                </tr>
+            </table>
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td class="ctitle" bgcolor="#000080">What's New</td>
+                </tr>
+                <tr>
+                    <td class="cbox">
+                        <p><b>21 Sep 2026</b> - Rebuild by hand, from scratch. Six pages, one stylesheet,
+                        zero JavaScript, verified against IE 5.5 and RetroZilla.</p>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="term">
+                C:\&gt; NET SEND SYSTEM_PORTAL<br>
+                All systems nominal. JavaScript: OFF (and it does not matter).<br>
+                C:\&gt;_
+            </div>
+        </td>
+    </tr>
+
+    <!-- ============ STATUS BAR ============ -->
+    <tr>
+        <td class="statusbar" bgcolor="#c0c0c0">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td><span class="statuscell">Ready</span></td>
+                    <td align="right">
+                        <span class="statuscell">800 x 600</span>
+                        <span class="statuscell">JS: off</span>
+                        <span class="statuscell">IE 5.5 OK</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>
