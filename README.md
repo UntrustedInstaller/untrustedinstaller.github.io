@@ -42,11 +42,19 @@ The floor is **IE 5.5 on Windows 98**; everything else is a bonus. The rules:
 - The nav bar, sidebar, and footer are duplicated in each page - that is how the
   90s did it (there is no build step). Change them in all six files or keep
   them consistent.
-- Placeholder content is marked with `EDIT ME` HTML comments
-  (your e-mail in `contact.html`, specs in `specs.html`, project rows in
-  `projects.html`, bio in `about.html`, links in `links.html`).
+- Some details are still marked `TBD` on the specs page and a placeholder
+  e-mail lives on the contact page - swap in the real values.
 - To add a page: copy an existing one, change the `<title>`, the nav
   (`nav-current` marks the active page), and the sidebar menu highlight.
+
+## Visitor counter
+
+The "Visitor Count" box in every sidebar is a plain `<img>` hotlinked to
+hitwebcounter.com - no JavaScript, so it works on IE 5.5 and keeps the
+site's no-JS pledge intact. It is registered to this site's counter
+(`page=21520490`, style 0010). To reset, change the style, or manage it,
+re-run the registration form at https://www.hitwebcounter.com/ and swap the
+`<img src>` URL in the six sidebars.
 
 ## Regenerating the badges
 
