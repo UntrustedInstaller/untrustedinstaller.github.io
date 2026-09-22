@@ -16,9 +16,9 @@ Live at: https://untrustedinstaller.github.io/
 | `index.html`   | Home / welcome + recent updates log        |
 | `about.html`   | About the site and its operator            |
 | `projects.html`| Project index with status table            |
-| `specs.html`   | System specs + hardware archive            |
+| `specs.html`   | The machine behind the portal              |
 | `links.html`   | Hand-picked links                          |
-| `contact.html` | Contact, guestbook note, colophon          |
+| `contact.html` | Contact (e-mail, Discord, GitHub)          |
 | `style.css`    | The one shared stylesheet (CSS1 only)      |
 | `img/`         | 88x31 badge GIFs                           |
 | `favicon.ico`  | Small favicon (16/32 px)                   |
@@ -45,9 +45,8 @@ The floor is **IE 5.5 on Windows 98**; everything else is a bonus. The rules:
 - The nav bar, sidebar, and footer are duplicated in each page - that is how the
   90s did it (there is no build step). Change them in all six files or keep
   them consistent.
-- The specs page carries the machine's real hardware; the fleet inventory
-  on that page is still a work in progress. E-mail and Discord on the contact
-  page match the GitHub profile.
+- The specs page carries the machine's real hardware. E-mail and Discord on
+  the contact page match the GitHub profile.
 - To add a page: copy an existing one, change the `<title>`, the nav
   (`nav-current` marks the active page), and the sidebar menu highlight.
 
