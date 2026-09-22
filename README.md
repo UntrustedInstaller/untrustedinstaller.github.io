@@ -60,11 +60,11 @@ site's no-JS pledge intact. It is registered to this site's counter
 re-run the registration form at https://www.hitwebcounter.com/ and swap the
 `<img src>` URL in the six sidebars.
 
-## Regenerating the badges
+## Badges
 
-```sh
-python3 make-badges.py   # requires Pillow; rewrites img/*.gif and favicon.ico
-```
+The 88x31 badges (`img/`) and `favicon.ico` are pre-made GIFs - the site needs
+no generator. The script that produced them, `make-badges.py`, was retired;
+it still lives in git history if the badges ever need regenerating.
 
 ## Testing on a real vintage machine
 
