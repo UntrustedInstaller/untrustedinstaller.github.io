@@ -45,9 +45,9 @@ The floor is **IE 5.5 on Windows 98**; everything else is a bonus. The rules:
 - The nav bar, sidebar, and footer are duplicated in each page - that is how the
   90s did it (there is no build step). Change them in all six files or keep
   them consistent.
-- The hardware rows on the specs page are still marked `TBD` and the contact
-  page e-mail is intentionally unpublished (reachable via GitHub for now) -
-  swap in the real values as they arrive.
+- The hardware rows on the specs page are still marked `TBD` - swap in the
+  real values as they arrive. E-mail and Discord on the contact page match
+  the GitHub profile.
 - To add a page: copy an existing one, change the `<title>`, the nav
   (`nav-current` marks the active page), and the sidebar menu highlight.
 
