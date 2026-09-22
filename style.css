@@ -1,0 +1,247 @@
+/*
+ * SYSTEM_PORTAL - shared stylesheet
+ *
+ * Compatibility floor: Internet Explorer 5.5 (Windows 98), RetroZilla 1.x,
+ * Netscape Navigator 4.7, and everything modern.
+ *
+ * Deliberately limited to CSS1 (plus the lightest, safest CSS2 touches that
+ * IE 5.5 handles).  No flexbox, no grid, no media queries, no position:fixed,
+ * no CSS variables, no border-radius.  Every visual keeps an inline-attribute
+ * fallback in the HTML (bgcolor, align, width...) so pages still look right if
+ * the stylesheet is ignored.
+ */
+
+body {
+    background-color: #003366;
+    color: #000000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 10px 10px 30px 10px;
+    padding: 0px;
+}
+
+a:link { color: #000080; text-decoration: underline; }
+a:visited { color: #800080; text-decoration: underline; }
+a:hover { color: #cc0000; text-decoration: none; }
+a:active { color: #cc0000; text-decoration: underline; }
+
+/* ------------------------------------------------------------------ */
+/* Masthead                                                            */
+/* ------------------------------------------------------------------ */
+.masthead {
+    background-color: #000033;
+    color: #ffffff;
+    padding: 12px 16px 10px 16px;
+    border-bottom: 4px solid #008080;
+}
+
+.masthead-title {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 3px;
+}
+
+.masthead-title .accent { color: #66cccc; }
+
+.masthead-sub {
+    font-size: 11px;
+    color: #99ccff;
+}
+
+/* ------------------------------------------------------------------ */
+/* Top navigation bar                                                  */
+/* ------------------------------------------------------------------ */
+.navbar {
+    background-color: #c0c0c0;
+    padding: 6px 12px 6px 12px;
+    border-bottom: 1px solid #003366;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar a:link, .navbar a:visited {
+    color: #000080;
+    text-decoration: none;
+    padding: 1px 6px 1px 6px;
+}
+
+.navbar a:hover, .navbar a:active {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+.nav-current {
+    background-color: #008080;
+    color: #ffffff;
+    padding: 2px 6px 2px 6px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Sidebar                                                             */
+/* ------------------------------------------------------------------ */
+.sidebar {
+    background-color: #cccccc;
+    border-right: 1px solid #999999;
+    padding: 10px 8px 12px 8px;
+    vertical-align: top;
+}
+
+.sidemenuhead {
+    background-color: #008080;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 4px 6px 4px 6px;
+    margin-bottom: 6px;
+}
+
+.sidebar p, .sidebar div {
+    margin: 6px 2px 12px 2px;
+    padding: 0px;
+}
+
+.sidemenu {
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.sidemenu a:link, .sidemenu a:visited {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidemenu a:hover, .sidemenu a:active {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+.menu-current {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+.counter {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 13px;
+    color: #00ff00;
+    letter-spacing: 3px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Main content                                                        */
+/* ------------------------------------------------------------------ */
+.content {
+    background-color: #ffffff;
+    padding: 14px 18px 20px 18px;
+    vertical-align: top;
+}
+
+.page-title {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 19px;
+    font-weight: bold;
+    color: #003366;
+    letter-spacing: 1px;
+    margin: 0px 0px 6px 0px;
+    padding: 0px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Boxes                                                               */
+/* ------------------------------------------------------------------ */
+.box {
+    border: 1px solid #669999;
+    margin-bottom: 16px;
+}
+
+.box-head {
+    background-color: #003366;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 5px 8px 5px 8px;
+}
+
+.box-body {
+    padding: 9px 10px 10px 10px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Text helpers                                                        */
+/* ------------------------------------------------------------------ */
+.small { font-size: 10px; }
+.note { font-size: 11px; color: #666666; }
+.center { text-align: center; }
+
+.news-date {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 11px;
+    color: #cc0000;
+    white-space: nowrap;
+    padding-right: 10px;
+}
+
+/* Terminal-style block */
+.term {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #000000;
+    color: #00ff00;
+    font-size: 11px;
+    line-height: 1.5;
+    padding: 10px 12px 10px 12px;
+}
+
+.term .prompt { color: #ffff00; font-weight: bold; }
+.term .tag { color: #ffffff; font-weight: bold; }
+
+/* ------------------------------------------------------------------ */
+/* Data tables                                                         */
+/* ------------------------------------------------------------------ */
+table.data {
+    width: 100%;
+}
+
+table.data th {
+    background-color: #003366;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px 6px 5px 6px;
+    border: 1px solid #669999;
+}
+
+table.data td {
+    font-size: 11px;
+    vertical-align: top;
+    padding: 5px 6px 5px 6px;
+    border: 1px solid #669999;
+}
+
+table.data tr.alt td { background-color: #ccffff; }
+
+/* ------------------------------------------------------------------ */
+/* Footer + badges                                                     */
+/* ------------------------------------------------------------------ */
+.footer {
+    background-color: #c0c0c0;
+    border-top: 1px solid #003366;
+    padding: 8px 10px 10px 10px;
+    text-align: center;
+    font-size: 10px;
+    color: #333333;
+    line-height: 1.7;
+}
+
+.footer a:link, .footer a:visited { color: #000080; }
+
+.badge-row img { margin: 2px; }
